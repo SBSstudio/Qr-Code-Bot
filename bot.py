@@ -9,15 +9,20 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
 )
 start_msg = '''
-<b>HELLO THERE </b>👋👋
-<i>Welcome TO Qr code generator Bot</i>
-<i>Send Me any Email ID,Text,url,spotify song link etc I will generate a qr code for it</i>
+<b>Hello Friend,</b> <i>I'm Qr Code Bot.</i>
+
+Send Me any Email ID,Text,any url etc. I will generate a qr code for it.
+
 <b>Direct Media files Are not supported</b>
-<i>How ever U can send a direct link to those files</i>
+
+@TGqrcodebot|@SBS_Studio
 '''
 help_msg = '''
-<i> Just Send me any Email Id,Text ,url etc(no media files...)</i>
-<i>I will generate a Qr Code for it and send it to you</i>
+Send Me any Email ID,Text,any url etc. I will generate a qr code for it.
+
+<b>Direct Media files Are not supported</b>
+
+@TGqrcodebot|@SBS_Studio
 '''
 
 
@@ -41,7 +46,8 @@ def msg(update: Update, context: CallbackContext) -> None:
         Qr_Code = QRCode(text)
         Qr_Code.png(qr_file, scale=10)
         update.message.reply_photo(photo=open(
-            qr_file, "rb"), reply_to_message_id=message_id, caption=f"Here is Your Qr code for '{text}'")
+            qr_file, "rb"), reply_to_message_id=message_id, caption=f"Here is Your Qr code for '{text}' \n\n@TGqrcodebot|@SBS_Studio
+")
         update.message.reply_text("Finished")
         os.remove(qr_file)
     except Exception:
