@@ -46,8 +46,7 @@ def msg(update: Update, context: CallbackContext) -> None:
         Qr_Code = QRCode(text)
         Qr_Code.png(qr_file, scale=10)
         update.message.reply_photo(photo=open(
-            qr_file, "rb"), reply_to_message_id=message_id, caption=f"Here is Your Qr code for '{text}' \n\n@TGqrcodebot|@SBS_Studio
-")
+            qr_file, "rb"), reply_to_message_id=message_id, caption=f"Here is Your Qr code for '{text}' \n\n@TGqrcodebot|@SBS_Studio")
         update.message.reply_text("Finished")
         os.remove(qr_file)
     except Exception:
