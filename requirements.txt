@@ -1,3 +1,11 @@
 pyqrcode
 python-telegram-bot
 pypng
+asyncio
+hachoir
+pyrogram
+tgcrypto
+uuid
+ffmpeg-python
+urllib3
+selenium
