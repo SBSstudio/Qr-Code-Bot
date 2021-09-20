@@ -97,14 +97,6 @@ async def pyro_fsub(c, message, fsub):
         await c.send_message(
             chat_id=message.chat.id,
             text="**Please Join My Updates Channel to Use Me!**",
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("Join Now", url=f"https://t.me/{chnl}")
-                    ]
-                ]
-            )
-        )
         return False
     except Exception as kk:
         print(kk)
