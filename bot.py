@@ -31,6 +31,8 @@ from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 import shutil
 
 TOKEN = os.environ.get('TOKEN')
+UPDTE_CHNL = os.environ.get('UPDTE_CHNL')
+
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
 )
